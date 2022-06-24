@@ -19,7 +19,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: 21
         protocol: ftp
-        local-dir: /
         server-dir: public_html/
         log-level: minimal
         security: strict
