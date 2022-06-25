@@ -29,14 +29,14 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/about">About</a>
+                        <a class="nav-link disabled" aria-current="page" href="/about">About</a>
                     </li>
 
 
                 </ul>
                 <ul class="d-flex navbar-nav">
                     <li class="nav-item position-relative">
-                        <a class="nav-link" aria-current="page" href="/about">API <span class="badge bg-danger position-absolute top-0 start-100">NEW</span></a>
+                        <a class="nav-link" aria-current="page" href="/docs/badge">API <span class="badge bg-danger position-absolute top-0 start-100">NEW</span></a>
                     </li>
                 </ul>
             </div>

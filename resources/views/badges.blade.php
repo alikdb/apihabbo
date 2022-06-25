@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="b-side mt-3">
+                    <div class="b-side mt-3 d-flex justify-content-center w-100 flex-wrap gap-2">
                         @foreach ($badges as $badge)
                             <div class="h-badge" data-bs-toggle="tooltip" data-bs-html="true" title="{{$badge->code}} <br> {{$badge->name}} <br> {{$badge->hotel}}">
 

@@ -27,6 +27,10 @@
                         <tbody>
                         <tr>
                             <td>code</td>
+                            <td>Allows you to search via code.</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
                             <td>Allows you to search via name.</td>
                         </tr>
                         <tr>
