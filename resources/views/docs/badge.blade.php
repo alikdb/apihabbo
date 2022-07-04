@@ -58,7 +58,7 @@
                     <div class="alert alert-info mt-3">
                         The follow request parameters are available:
                     </div>
-                    <p>example: <a href="{{ env('APP_URL') }}/api/furnis?per_page=20">{{ env('APP_URL') }}/api/badges?per_page=20</a></p>
+                    <p>example: <a href="{{ env('APP_URL') }}/api/furnis?per_page=20">{{ env('APP_URL') }}/api/furnis?per_page=20</a></p>
                     <table class="table table-bordered mb-0">
                         <thead>
                         <tr>
