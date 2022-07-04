@@ -46,6 +46,44 @@
 
                 </div>
             </div>
+
+            <div class="card mt-5">
+                <div class="card-header">
+                    Furni API
+                </div>
+                <div class="card-body">
+                    <a href="{{ env('APP_URL') }}/api/furnis">
+                        {{ env('APP_URL') }}/api/furnis
+                    </a>
+                    <div class="alert alert-info mt-3">
+                        The follow request parameters are available:
+                    </div>
+                    <p>example: <a href="{{ env('APP_URL') }}/api/furnis?per_page=20">{{ env('APP_URL') }}/api/badges?per_page=20</a></p>
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Usage</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>code</td>
+                            <td>Allows you to search via code.</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>Allows you to search via name.</td>
+                        </tr>
+                        <tr>
+                            <td>per_page</td>
+                            <td>Default limit is 50, max 100.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
         </div>
         <div class="col-md-4 mt-3">
             <div class="card">

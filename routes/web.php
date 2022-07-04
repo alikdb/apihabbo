@@ -17,6 +17,7 @@ use App\Http\Controllers\Home;
 
 Route::get('/', [Home::class, 'index']);
 Route::get('/badges', [Home::class, 'listBadges'])->name('listBadge');
+Route::get('/furnis', [Home::class, 'listFurnis'])->name('listFurnis');
 Route::get('/docs/badge', function () {
   return view('docs.badge');
 });

@@ -25,9 +25,8 @@
                         <a class="nav-link" aria-current="page" href="/badges">Badges</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-current="page" href="/badges">Furniture</a>
+                        <a class="nav-link" aria-current="page" href="/furnis">Furniture</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link disabled" aria-current="page" href="/about">About</a>
                     </li>
