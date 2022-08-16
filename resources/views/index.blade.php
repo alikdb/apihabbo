@@ -21,7 +21,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="d-flex justify-content-center w-100 flex-wrap gap-2">
                     @foreach ($badges as $badge)
                         <div class="h-badge" data-bs-toggle="tooltip" data-bs-html="true" title="{{$badge->code}} <br> {{$badge->name}} <br> {{$badge->hotel}}">
 
@@ -29,7 +28,6 @@
 
                         </div>
                     @endforeach
-                    </div>
 
                 </div>
             </div>
