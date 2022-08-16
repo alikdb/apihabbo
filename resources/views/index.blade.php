@@ -21,6 +21,7 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    <div class="d-flex justify-content-center w-100 flex-wrap gap-2">
                     @foreach ($badges as $badge)
                         <div class="h-badge" data-bs-toggle="tooltip" data-bs-html="true" title="{{$badge->code}} <br> {{$badge->name}} <br> {{$badge->hotel}}">
 
@@ -28,6 +29,7 @@
 
                         </div>
                     @endforeach
+                    </div>
 
                 </div>
             </div>
@@ -39,7 +41,8 @@
                         <span><a href="/furnis">All ></a></span>
                     </div>
                 </div>
-                <div class="card-body d-flex justify-content-center">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center w-100 flex-wrap gap-2">
                     @foreach ($furnis as $furni)
                         <div class="h-badge" data-bs-toggle="tooltip" data-bs-html="true" title="{{$furni->code}} <br> {{$furni->name}} <br> {{$furni->hotel}}">
 
@@ -47,6 +50,7 @@
 
                         </div>
                     @endforeach
+                </div>
                 </div>
             </div>
         </div>
