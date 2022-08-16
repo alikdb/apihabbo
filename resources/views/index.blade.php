@@ -17,7 +17,7 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
                         <span>Badges</span>
-                        <span><a href="badges">All ></a></span>
+                        <span><a href="/badges">All ></a></span>
                     </div>
                 </div>
                 <div class="card-body">
@@ -38,11 +38,17 @@
                 <div class="card-header">
                     <div class="d-flex justify-content-between">
                         <span>Furnis</span>
-                        <span><a href="badges">All ></a></span>
+                        <span><a href="/furnis">All ></a></span>
                     </div>
                 </div>
                 <div class="card-body d-flex justify-content-center">
-                    cooming soon!
+                    @foreach ($furnis as $furni)
+                        <div class="h-badge" data-bs-toggle="tooltip" data-bs-html="true" title="{{$furni->code}} <br> {{$furni->name}} <br> {{$furni->hotel}}">
+
+                            <img src="https://images.habbo.com/dcr/hof_furni/{{ $furni->revision }}/{{ $furni->code }}_icon.png">
+
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

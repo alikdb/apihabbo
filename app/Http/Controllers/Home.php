@@ -11,7 +11,8 @@ class Home extends Controller
 
     public function index() {
         $badges = BadgesNameModel::orderBy('times', 'desc')->limit(32)->get();
-        return view('index', ['badges' => $badges]);
+        $furnis = Furnis::orderBy('created_at', 'desc')->limit(32)->get();
+        return view('index', ['badges' => $badges, 'furnis' => $furnis]);
     }
     public function listBadges($search = null) {
         $badges = BadgesNameModel::orderBy('times', 'desc')->paginate(150);
