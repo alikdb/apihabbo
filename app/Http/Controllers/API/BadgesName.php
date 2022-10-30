@@ -47,6 +47,6 @@ class BadgesName extends Controller
             }
 
         }
-        echo $hotel . ' oteline '. $count .' rozet eklendi';
+        echo $hotel . ' oteline '. $count .' rozet eklendi <br>';
     }
 }
