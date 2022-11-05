@@ -81,7 +81,7 @@
                         </tr>
                         <tr>
                             <td>hotel</td>
-                            <td>You may specify a hotel to fetch badges from (default is 'com').<br><small class="text-muted">options: 'com', 'com.br', 'com.tr', 'it', 'nl', 'es', 'fi', 'de', 'fr' or 'all'.</small></td>
+                            <td>You may specify a hotel to fetch furnis from (default is 'com').<br><small class="text-muted">options: 'com', 'com.br', 'com.tr', 'it', 'nl', 'es', 'fi', 'de', 'fr' or 'all'.</small></td>
                         </tr>
                         </tbody>
                     </table>
