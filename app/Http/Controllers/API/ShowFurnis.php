@@ -12,6 +12,7 @@ class ShowFurnis extends Controller
         $pp = $_GET['per_page'] ?? 50;
         $where = htmlspecialchars($_GET['name'] ?? null) ?? null;
         $code = htmlspecialchars($_GET['code'] ?? null) ?? null;
+        $hotel = htmlspecialchars($_GET['hotel'] ?? 'com') ?? 'com';
         if (is_numeric($pp) && $pp < 100) {
             $pp = $pp;
         }
@@ -19,7 +20,7 @@ class ShowFurnis extends Controller
             $query->where('name', 'like', '%'.$where.'%');
         })->when($code, function ($query, $code) {
             $query->where('code', $code);
-        })->orderBy('created_at', 'desc')->paginate($pp);
+        })->where('hotel', $hotel)->orderBy('created_at', 'desc')->paginate($pp);
         return response()->json($badges);
     }
 }

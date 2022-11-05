@@ -79,6 +79,10 @@
                             <td>per_page</td>
                             <td>Default limit is 50, max 100.</td>
                         </tr>
+                        <tr>
+                            <td>hotel</td>
+                            <td>You may specify a hotel to fetch badges from (default is 'com').<br><small class="text-muted">options: 'com', 'com.br', 'com.tr', 'it', 'nl', 'es', 'fi', 'de', 'fr' or 'all'.</small></td>
+                        </tr>
                         </tbody>
                     </table>
 
