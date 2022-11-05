@@ -13,8 +13,8 @@ class FurnisController extends Controller
 
     public function scanFurnis() {
         echo '<pre>';
-        foreach ($this->hotels as $hotel) {
-        $xmlGet = Http::get('https://habbo.'.$hotel.'/gamedata/furnidata_xml/0');
+        foreach ($this->hotels as $h) {
+        $xmlGet = Http::get('https://habbo.'.$h.'/gamedata/furnidata_xml/0');
         $xml = simplexml_load_string($xmlGet->body());
         $furnis = [];
         foreach ($xml->roomitemtypes->furnitype as $furni) {
@@ -25,7 +25,7 @@ class FurnisController extends Controller
             $hotel_id = (string) $furni->attributes()->id;
             $code = (string) $furni->attributes()->classname;
 
-            $countDb = Furnis::where(['code' => $code, 'hotel' => $hotel])->count();
+            $countDb = Furnis::where(['code' => $code, 'hotel' => $h])->count();
             if ($countDb == 0) {
                 Furnis::create([
                     'revision' => $revision,
@@ -34,11 +34,11 @@ class FurnisController extends Controller
                     'description' => $description,
                     'category' => $category,
                     'hotel_id' => $hotel_id,
-                    'hotel' => $hotel
+                    'hotel' => $h
                 ]);
-                echo 'Added: '.$name.' - '.$hotel.'<br>';
+                echo 'Added: '.$name.' - '.$h.'<br>';
             }else {
-                $getFurni = Furnis::where('code', $code)->first();
+                $getFurni = Furnis::where(['code' => $code, 'hotel' => $h])->first();
                 if ($getFurni->name != $name) {
                     $getFurni->name = $name;
                     $getFurni->save();
