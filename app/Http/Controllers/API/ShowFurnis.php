@@ -19,7 +19,7 @@ class ShowFurnis extends Controller
         $badges = Furnis::when($where, function ($query, $where) {
             $query->where('name', 'like', '%'.$where.'%');
         })->when($code, function ($query, $code) {
-            $query->where('code', $code);
+            $query->where('code', 'like', '%'.$code.'%');
         })->where('hotel', $hotel)->orderBy('created_at', 'desc')->paginate($pp);
         return response()->json($badges);
     }
